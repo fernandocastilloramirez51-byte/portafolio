@@ -1,29 +1,393 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/tstrap.min.css
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <a href = "https://fernandocastilloramirez51-byte.github.io/portafolio/Bloc1.html">tarea 1</a>
-    <a href = "https://fernandocastilloramirez51-byte.github.io/portafolio/Tarea2.html">tarea 2</a>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-  </body>
+    <style>
+<style>
+:root{
+    --primary:#2563EB;
+    --secondary:#4F46E5;
+    --accent:#06B6D4;
+    --dark:#1E293B;
+    --light:#F8FAFC;
+    --white:#FFFFFF;
+}
+
+/* Scroll suave */
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color:var(--light);
+    color:var(--dark);
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    background:rgba(15,23,42,.95) !important;
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+    font-weight:700;
+    font-size:1.5rem;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.95),
+            rgba(79,70,229,.95)
+        ),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:1.3rem;
+    opacity:.9;
+}
+
+/* BOTONES */
+.btn-primary{
+    background:var(--accent);
+    border:none;
+    border-radius:50px;
+    padding:12px 30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:#0891b2;
+    transform:translateY(-3px);
+}
+
+/* SECCIONES */
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    color:#64748B;
+    margin-bottom:50px;
+}
+
+/* TARJETAS */
+.service-card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+    background:white;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.15);
+}
+
+.service-icon{
+    width:80px;
+    height:80px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    font-size:30px;
+}
+
+/* ABOUT */
+.about-image{
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+/* FORMULARIO */
+.form-control{
+    border-radius:12px;
+    padding:14px;
+    border:1px solid #E2E8F0;
+}
+
+.form-control:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 0.25rem rgba(37,99,235,.15);
+}
+
+/* FOOTER */
+footer{
+    background:#0F172A;
+    color:white;
+}
+
+.footer-links a{
+    color:#CBD5E1;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+/* TITULOS */
+h2{
+    font-weight:800;
+    color:var(--dark);
+}
+
+/* SECCION SERVICIOS */
+.services{
+    background:white;
+}
+
+/* ANIMACION ENTRADA */
+.fade-up{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            #MiEmpresa</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        #inicioInicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        #serviciosServicios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        #nosotrosNosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        #contactoContacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">
+                Bienvenido a MiEmpresa
+            </h1>
+
+            <p class="lead mt-3">
+                Soluciones tecnológicas para impulsar tu negocio.
+            </p>
+
+            <a href="#                Contáctanos
+            </a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2>Nuestros Servicios</h2>
+                <p class="text-muted">
+                    Ayudamos a transformar ideas en soluciones digitales.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm service-card">
+                        <div class="card-body text-center">
+                            <h4>Desarrollo Web</h4>
+                            <p>
+                                Aplicaciones modernas, rápidas y escalables.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm service-card">
+                        <div class="card-body text-center">
+                            <h4>Cloud</h4>
+                            <p>
+                                Soluciones basadas en AWS, Azure y Google Cloud.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm service-card">
+                        <div class="card-body text-center">
+                            <h4>Consultoría TI</h4>
+                            <p>
+                                Optimización de procesos y arquitectura empresarial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="bg-light py-5">
+        <div class="container">
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Sobre Nosotros</h2>
+
+                    <p>
+                        Somos una empresa enfocada en la innovación tecnológica,
+                        desarrollando soluciones digitales que generan valor a
+                        nuestros clientes.
+                    </p>
+
+                    <p>
+                        Nuestro equipo combina experiencia, creatividad y las
+                        mejores prácticas del mercado.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    https://images.unsplash.com/photo-1522202176988-66273c2fd55f
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2>Contacto</h2>
+                <p class="text-muted">
+                    Déjanos un mensaje y te responderemos pronto.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Nombre">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Correo electrónico">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                placeholder="Mensaje"></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">
+                © 2026 MiEmpresa. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.jsscript>
+
+</body>
 </html>
